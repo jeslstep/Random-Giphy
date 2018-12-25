@@ -1,6 +1,38 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import {
+  withStyles
+} from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+
+const styles = theme => ({
+  root: {
+    ...theme.mixins.gutters(),
+    marginTop: theme.spacing.unit * 5,
+    marginBottom: theme.spacing.unit * 5,
+    marginRight: theme.spacing.unit * 5,
+    marginLeft: theme.spacing.unit * 5,
+
+    paddingTop: theme.spacing.unit * 5,
+    paddingBottom: theme.spacing.unit * 5,
+    backgroundColor: '#1a3d50'
+  },
+});
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#efbf42', 
+    },
+    secondary: {
+      main: '#1a3d50',
+    },
+  },
+});
 
 class App extends Component {
 // set state
@@ -38,23 +70,32 @@ getTrending = () => {
 
 
   render() {
+    const { classes } = this.props;
     return (
+        <MuiThemeProvider theme={theme}>
+       
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">APIS</h1>
-          <h4><i>APIS</i></h4>
+          <h1 className="App-title">Random Trending Giphy</h1>
         </header>
-         <pre>The giphs trending are: { JSON.stringify(this.state.images) } </pre> 
+         <Paper className={classes.root} elevation={5}>
          <div>
-           <img height="auto" width="300" alt="gif" src={this.state.images}/> 
+           <img height="300" width="auto" alt="gif" src={this.state.images}/> 
          </div>
          <div>
-           <button onClick={this.getTrending}>Change imgage</button>
+           <Button variant="contained" color="primary" onClick={this.getTrending}>Change imgage</Button>
          </div>
         <br/>
+         </Paper>
       </div>
+     
+      </MuiThemeProvider>
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(App);
