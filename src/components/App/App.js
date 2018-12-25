@@ -19,14 +19,20 @@ const styles = theme => ({
 
     paddingTop: theme.spacing.unit * 5,
     paddingBottom: theme.spacing.unit * 5,
-    backgroundColor: '#1a3d50'
+    backgroundColor: '#8b0000'
   },
+  background: {
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 5,
+    paddingBottom: theme.spacing.unit * 5,
+    backgroundColor: '#222'
+  }
 });
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#efbf42', 
+      main: '#000000', 
     },
     secondary: {
       main: '#1a3d50',
@@ -73,22 +79,22 @@ getTrending = () => {
     const { classes } = this.props;
     return (
         <MuiThemeProvider theme={theme}>
-       
-      <div className="App">
-        <header className="App-header">
+           <header className="App-header">
           <h1 className="App-title">Random Trending Giphy</h1>
         </header>
+       <div className={classes.background}>
+      <div className="App">
          <Paper className={classes.root} elevation={5}>
          <div>
            <img height="300" width="auto" alt="gif" src={this.state.images}/> 
          </div>
          <div>
-           <Button variant="contained" color="primary" onClick={this.getTrending}>Change imgage</Button>
+           <Button variant="contained" color="primary" onClick={this.getTrending}>Change Giphy</Button>
          </div>
         <br/>
          </Paper>
       </div>
-     
+      </div>
       </MuiThemeProvider>
     );
   }
