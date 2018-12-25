@@ -4,21 +4,20 @@ import './App.css';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
-import {
-  withStyles
-} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import Search from '../Search/Search';
 
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
-    marginTop: theme.spacing.unit * 5,
-    marginBottom: theme.spacing.unit * 5,
-    marginRight: theme.spacing.unit * 5,
-    marginLeft: theme.spacing.unit * 5,
+    marginTop: theme.spacing.unit * 1,
+    marginBottom: theme.spacing.unit * 1,
+    marginRight: theme.spacing.unit * 1,
+    marginLeft: theme.spacing.unit * 1,
 
-    paddingTop: theme.spacing.unit * 5,
-    paddingBottom: theme.spacing.unit * 5,
+    paddingTop: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 3,
     backgroundColor: '#8b0000'
   },
   background: {
@@ -41,39 +40,36 @@ const theme = createMuiTheme({
 });
 
 class App extends Component {
-// set state
-state = {
-  images: ''
-};
+  // set state
+  state = {
+    images: ''
+  };
 
+  // get giphy upon page load
+  componentDidMount() {
+    this.getTrending();
+  }
 
+  // randomly show a gif
+  getRndIntergert = (min,max)=> {
+    return Math.floor (Math.random() * (max-min))+ min;
+  }
 
-// get giphy upon page load
-componentDidMount() {
-  this.getTrending();
-}
-
-// randomly show a gif
-getRndIntergert = (min,max)=> {
-  return Math.floor (Math.random() * (max-min))+ min;
-}
-// GET request for giphy from the server
-getTrending = () => {
-  axios.get('/trending')
-    .then((response) => {
-      console.log(response.data);
-      this.setState(
-        {
-          images: response.data[this.getRndIntergert(1, response.data.length)].images.fixed_width.url
-        })
-      ;
-    })
-    .catch((error) => {
-      alert('error in making get request', error);
-    })
-}
-
-
+  // GET request for giphy from the server
+  getTrending = () => {
+    axios.get('/trending')
+      .then((response) => {
+        console.log('trending results', response.data);
+        this.setState(
+          {
+            images: response.data[this.getRndIntergert(1, response.data.length)].images.fixed_width.url
+          })
+        ;
+      })
+      .catch((error) => {
+        alert('error in making get request', error);
+      })
+  }
 
   render() {
     const { classes } = this.props;
@@ -86,7 +82,7 @@ getTrending = () => {
       <div className="App">
          <Paper className={classes.root} elevation={5}>
          <div>
-           <img height="300" width="auto" alt="gif" src={this.state.images}/> 
+           <img height="300" width="400" alt="gif" src={this.state.images}/> 
          </div>
          <div>
            <Button variant="contained" color="primary" onClick={this.getTrending}>Change Giphy</Button>
@@ -94,6 +90,10 @@ getTrending = () => {
         <br/>
          </Paper>
       </div>
+        <div className="App">
+         <h1>Or</h1>
+          <Search/>
+          </div>
       </div>
       </MuiThemeProvider>
     );

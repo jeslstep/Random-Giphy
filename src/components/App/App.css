@@ -3,10 +3,20 @@
   text-align: center;
 }
 
+h1 {
+  color: white;
+}
+
+#card {
+  margin: 25px;
+  height: auto;
+  min-width: 350px;
+}
+
 .App-header {
   background-color: black;
-  min-height: 70px;
-  padding: 20px;
+  max-height: 200px;
+  padding: 5px;
   color: white;
   text-align: center;
 }

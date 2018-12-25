@@ -27,6 +27,18 @@ app.get('/trending', (req,res)=>{
     })
 })
 
+app.post('/search', (req, res) => {
+    console.log('search', req.body.search);
+    axios.get(`http://api.giphy.com/v1/gifs/search?q=${req.body.search}&api_key=${process.env.GIPHY_API_KEY}`)
+        .then((response) => {
+            res.send(response.data.data);
+        })
+        .catch((error) => {
+            res.sendStatus(500);
+            console.log('error in giphy search', error);
+        })
+})
+
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);
