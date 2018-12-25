@@ -2,7 +2,12 @@
 
 `npm install`
 
-This is the starting repo to accompany 06-02b_server-axios-env.md
+Aquire a giphy api key
+
+Create a .env file and add your giphy api key
+GIPHY_API_KEY= YOUR_API_KEY
+
+
 
 This is a 3/4 stack app (no DB), although the pool file is in the repo.
 `npm run client` and `npm run server`
