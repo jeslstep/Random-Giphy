@@ -17,7 +17,7 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit * 1,
 
     paddingTop: theme.spacing.unit * 3,
-    paddingBottom: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 1,
     backgroundColor: '#8b0000'
   },
   background: {
