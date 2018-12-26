@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import Search from '../Search/Search';
+import GiphySearch from '../GiphySearch/GiphySearch';
 
 const styles = theme => ({
   root: {
@@ -92,7 +92,7 @@ class App extends Component {
       </div>
         <div className="App">
          <h1>Or</h1>
-          <Search/>
+          <GiphySearch/>
           </div>
       </div>
       </MuiThemeProvider>
