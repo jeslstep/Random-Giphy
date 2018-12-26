@@ -9,8 +9,9 @@ h1 {
 
 #card {
   margin: 25px;
-  height: auto;
-  min-width: 350px;
+  height: 300px;
+  min-width: 300px;
+  display: inline-block;
 }
 
 .App-header {
@@ -19,6 +20,7 @@ h1 {
   padding: 5px;
   color: white;
   text-align: center;
+  padding: 1px;
 }
 
 .App-title {
@@ -30,7 +32,6 @@ h1 {
 }
 
 div {
-  margin-bottom: 10px;
   border: 15px;
   color: black;
 }
@@ -38,6 +39,9 @@ div {
 a {
   color: white;
 }
+
+
+
 
 
 

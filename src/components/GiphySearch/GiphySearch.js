@@ -67,20 +67,20 @@ class Search extends Component {
             <a href='#section1'> Scroll Down For Results </a>
         </form>
          <ScrollableAnchor id={'section1'}>
-        <div>
+          <div>
             {this.state.searchResults.map ( gif => (
-                <div>
+                 <div className="App">
                     <Card id ="card">
                     <CardMedia
                     component="img"
                     height="300" 
-                    width="400" 
+                    max-width="300" 
                     src={gif.images.fixed_width.url} 
                     alt={gif.description} 
                     title= {gif.description}
                     />
                     </Card>
-                </div>
+                    </div>
             ))}
         </div>
          </ScrollableAnchor>

@@ -13,16 +13,16 @@ const styles = theme => ({
     ...theme.mixins.gutters(),
     marginTop: theme.spacing.unit * 1,
     marginBottom: theme.spacing.unit * 1,
-    marginRight: theme.spacing.unit * 1,
-    marginLeft: theme.spacing.unit * 1,
+    marginRight: theme.spacing.unit * 0,
+    marginLeft: theme.spacing.unit * 0,
 
-    paddingTop: theme.spacing.unit * 3,
-    paddingBottom: theme.spacing.unit * 1,
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
     backgroundColor: '#8b0000'
   },
   background: {
     ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 5,
+    paddingTop: theme.spacing.unit * 3,
     paddingBottom: theme.spacing.unit * 5,
     backgroundColor: '#222'
   }
@@ -82,8 +82,9 @@ class App extends Component {
       <div className="App">
          <Paper className={classes.root} elevation={5}>
          <div>
-           <img height="300" width="400" alt="gif" src={this.state.images}/> 
+           <img height="300" width="auto" alt="gif" src={this.state.images}/> 
          </div>
+         <br/>
          <div>
            <Button variant="contained" color="primary" onClick={this.getTrending}>Change Giphy</Button>
          </div>
