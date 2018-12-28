@@ -1,6 +1,21 @@
 # Random-Giphy
 
-`npm install`
+
+Setup
+
+Read through the Giphy documentation 
+
+Register an account in order to get your API Key. This key is used for all of your requests to authenticate your app to Giphy.
+
+Create a .env file and add your API key to the line below. then, copy and paste the line into the .env file.
+
+GIPHY_API_KEY=YOUR_KEY_GOES_HERE
+
+Spin up your app:
+
+npm install
+npm run server
+npm run client
 
 Aquire a giphy api key
 
