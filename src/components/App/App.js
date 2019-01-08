@@ -82,7 +82,7 @@ class App extends Component {
       <div id="paperDiv" className="App">
          <Paper className={classes.root} elevation={5}>
          <div>
-           <img height="300" width="auto" alt="gif" src={this.state.images}/> 
+           <img height="auto" width="250" alt="gif" src={this.state.images}/> 
          </div>
          <br/>
          <div>
