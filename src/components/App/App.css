@@ -40,6 +40,10 @@ a {
   color: white;
 }
 
+#paperDiv {
+   height: auto;
+   max-width: 650px;
+}
 
 
 

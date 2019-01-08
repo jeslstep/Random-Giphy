@@ -78,8 +78,8 @@ class App extends Component {
            <header className="App-header">
           <h1 className="App-title">Random Trending Giphy</h1>
         </header>
-       <div className={classes.background}>
-      <div className="App">
+       <div align="center" className={classes.background}>
+      <div id="paperDiv" className="App">
          <Paper className={classes.root} elevation={5}>
          <div>
            <img height="300" width="auto" alt="gif" src={this.state.images}/> 
