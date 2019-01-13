@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import GiphySearch from '../GiphySearch/GiphySearch';
+import Footer from '../Footer/Footer'
 
 const styles = theme => ({
   root: {
@@ -95,6 +96,7 @@ class App extends Component {
          <h1>Or</h1>
           <GiphySearch/>
           </div>
+          <Footer/>
       </div>
       </MuiThemeProvider>
     );

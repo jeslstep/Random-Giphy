@@ -18,6 +18,7 @@ Between the server and client, you'll need two terminal tabs because we're using
 
 Read through the Giphy documentation 
 Register an account in order to get your API Key. This key is used for all of your requests to authenticate your app to Giphy.
+https://developers.giphy.com/docs/#api-keys
 
 ## Steps to Get the Development Environment Running
 
