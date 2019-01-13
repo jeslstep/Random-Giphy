@@ -3,6 +3,8 @@
 Click the change giphy button to view twenty-five randomly trending gifs
 and search for a gifs such as 'cats'.
 
+a maximum of 42 search requests an hour, 1000 search requests a day 
+
 # Built with:
 1. React
 2. Giphy API
