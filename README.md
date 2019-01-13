@@ -3,6 +3,18 @@
 Click the change giphy button to view twenty-five randomly trending gifs
 and search for a gifs such as 'cats'.
 
+# Built with:
+1. React
+2. Giphy API
+https://developers.giphy.com/docs/ 
+3. Express
+https://expressjs.com/en/starter/installing.html
+4. Node.js
+https://nodejs.org/en/
+https://www.npmjs.com/
+5. Material UI
+https://material-ui.com/getting-started/installation/
+
 # Setup
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
