@@ -78,7 +78,9 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
            <header className="App-header">
             <div id="logo">
+            <a href="https://giphy.com/" target="_blank">
               <img height="auto" width="90px" src="https://pmcvariety.files.wordpress.com/2016/10/giphy-logo-e1477932075273.png?w=867&h=490&crop=1" alt="Giphy logo"  />
+            </a>
             </div>
             <h1 className="App-title">Random Trending Giphy</h1>
             </header>
