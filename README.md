@@ -3,8 +3,6 @@
 Click the change giphy button to view twenty-five randomly trending gifs
 and search for a gifs such as 'cats'.
 
-This is a 3/4 stack app (no DB) -- MongoDB to be added
-
 # Setup
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
