@@ -21,6 +21,7 @@ h1 {
   color: white;
   text-align: center;
   padding: 1px;
+  margin-top: 0px;
 }
 
 .App-title {
@@ -44,6 +45,8 @@ a {
    height: auto;
    max-width: 450px;
 }
+
+
 
 
 

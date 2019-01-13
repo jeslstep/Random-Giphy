@@ -45,18 +45,19 @@ Authenticate by typing heroku login in Terminal
 Note: Your project also needs to have a git repository.
 
 ## Heroku Setup
+1. Remove the build/ line from your .gitignore if it's there -- we will want the build folder in heroku!
+2. start script in your package.json starts your node server and not React (Heroku won't need to build the React app)
+    a. "start": "node server/server.js",
+3. Make sure your package.json contains a build script:
+    a. "build": "react-scripts build"
+4. `npm run build`
+5. `git Commit`
+6. `git add .` 
+7. `git commit -m "YOUR COMMIT MESSAGE"`
+8. `git Push`
+9. Push to heroku `git push heroku master`
 
-1. In terminal, navigate to the project folder and type `heroku create`
-2. Login in if prompted
-3. Type `git remote -v` to ensure it added successfully
-4. Make sure your PORT is configured correctly as: `const PORT = process.env.PORT || 5000;`
-5. Next, commit your changes and push them to Heroku:
-    a. `git add .`
-    b. `git commit -m "MESSAGE"`
-    c. `git push heroku master`
-6. Type heroku open as a shortcut to open your website in a browser.
-
-Note: You'll need to commit and push each time you make a change that you want to deploy to Heroku. 
+Every time you make a change to the code that you want to see in Heroku: You'll have to make sure you run a build, then commit, then and push to Heroku. Every time.
 
 ## Helpful
 ### heroku logs - Display error logs

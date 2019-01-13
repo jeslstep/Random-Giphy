@@ -77,24 +77,27 @@ class App extends Component {
     return (
         <MuiThemeProvider theme={theme}>
            <header className="App-header">
-          <h1 className="App-title">Random Trending Giphy</h1>
-        </header>
-       <div align="center" className={classes.background}>
-      <div id="paperDiv" className="App">
-         <Paper className={classes.root} elevation={5}>
-         <div>
-           <img height="auto" width="250" alt="gif" src={this.state.images}/> 
-         </div>
-         <br/>
-         <div>
+            <div id="logo">
+              <img height="auto" width="90px" src="https://pmcvariety.files.wordpress.com/2016/10/giphy-logo-e1477932075273.png?w=867&h=490&crop=1" alt="Giphy logo"  />
+            </div>
+            <h1 className="App-title">Random Trending Giphy</h1>
+            </header>
+            <div align="center" className={classes.background}>
+            <div id="paperDiv" className="App">
+            <Paper className={classes.root} elevation={5}>
+            <div>
+            <img height="250" width="250" alt="gif" src={this.state.images}/> 
+            </div>
+            <br/>
+            <div>
            <Button variant="contained" color="primary" onClick={this.getTrending}>Change Giphy</Button>
-         </div>
-        <br/>
-         </Paper>
-      </div>
-        <div className="App">
-         <h1>Or</h1>
-          <GiphySearch/>
+            </div>
+            <br/>
+            </Paper>
+            </div>
+            <div className="App">
+            <h1>Or</h1>
+            <GiphySearch/>
           </div>
           <Footer/>
       </div>
