@@ -33,33 +33,33 @@ In seperate terminal windows (open a new termainal tab with `cmd + t` ):
     npm run client
 
 # Steps to Deploy on Heroku
-Heroku Prerequisite (one time)
+
+## Heroku Prerequisite (one time)
 Sign up for an account on Heroku.com
-You may have to give them a credit card, but you shouldnt need to pay for anything
-Install Heroku CLI by typing brew install heroku in Terminal
+You may have to give them a credit card, but you shouldn't need to pay for anything
+Install Heroku CLI by typing `brew install heroku` in Terminal
 Authenticate by typing heroku login in Terminal
 Note: Your project also needs to have a git repository.
 
 ## Heroku Setup
 Run the following commands from within your project folder.
 
-In terminal, navigate to your project folder and type heroku create
+In terminal, navigate to your project folder and type `heroku create`
 Login in if prompted
-Type git remote -v to ensure it added successfully
+Type `git remote -v` to ensure it added successfully
 Make sure your PORT is configured correctly as:
 
-const PORT = process.env.PORT || 5000;
+`const PORT = process.env.PORT || 5000;`
 Next, commit your changes and push them to Heroku:
 
-git add .
-git commit -m "MESSAGE"
-git push heroku master
-Note: You'll need to commit and push each time you make a change that you want to deploy to Heroku. Keep in mind you CAN NOT pull from Heroku. This is not a replacement for GitHub!
+`git add .`
+`git commit -m "MESSAGE"`
+`git push heroku master`
+
+Note: You'll need to commit and push each time you make a change that you want to deploy to Heroku. 
 
 ## Lastly
 open terminal and type heroku open as a shortcut to open your website in a browser.
-
-Note: It is best to fully test your code locally before deploying to Heroku. Bugs are much harder to troubleshoot on a live website.
 
 ## Miscellaneous
 heroku logs - Display error logs
