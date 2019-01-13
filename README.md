@@ -1,7 +1,7 @@
 # Random-Giphy
 
-User can click the change giphy button to view twenty-five randomly trending giphys
-and search for a giphy of their choosing such as 'cats'.
+Click the change giphy button to view twenty-five randomly trending gifs
+and search for a gifs such as 'cats'.
 
 This is a 3/4 stack app (no DB) -- MongoDB to be added
 
@@ -32,6 +32,8 @@ In seperate terminal windows (open a new termainal tab with `cmd + t` ):
     npm run server
     npm run client
 
+## Steps to Deploy
+
 # Completed Steps
 
 feature displayRandomGiphy -- allows user to get a random trending giphy from the Giphy Api by pressed the change giphy button
@@ -41,7 +43,7 @@ feature giphySearch -- allow user to search for a giphy
 
 feature mongoDatabase -- add mongo database to store giphy urls
 feature addToFavorites -- add ability to select giphys as favorites
-feature favoritesComponent -- link to page that displays all 
+feature favoritesComponent -- component that displays all favorite gifs 
 
 
 
