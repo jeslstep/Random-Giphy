@@ -5,6 +5,9 @@ and search for a gifs such as 'cats'.
 
 a maximum of 42 search requests an hour, 1000 search requests a day 
 
+# Website
+https://random-giphy.herokuapp.com/
+
 # Built with:
 1. React
 2. Giphy API
