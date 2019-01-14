@@ -45,6 +45,12 @@ Authenticate by typing heroku login in Terminal
 Note: Your project also needs to have a git repository.
 
 ## Heroku Setup
+1. In terminal, navigate to the project folder and type `heroku create`
+2. Login in if prompted
+3. Type `git remote -v` to ensure it added successfully
+4. Make sure your PORT is configured correctly as: `const PORT = process.env.PORT || 5000;`
+
+
 1. Remove the build/ line from your .gitignore 
 2. start script in your package.json starts your node server and not React (Heroku won't need to build the React app)
     a. "start": "node server/server.js",
