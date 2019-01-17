@@ -9,8 +9,8 @@ h1 {
 
 #card {
   margin: 25px;
-  height: 300px;
-  min-width: 300px;
+  height: auto;
+  max-width: 250px;
   display: inline-block;
 }
 

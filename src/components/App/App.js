@@ -72,11 +72,12 @@ class App extends Component {
       })
   }
 
-  render() {
+render() {
     const { classes } = this.props;
     return (
         <MuiThemeProvider theme={theme}>
            <header className="App-header">
+           {/* giphy logo */}
             <div id="logo">
             <a href="https://giphy.com/" target="_blank">
               <img height="auto" width="90" src="https://pmcvariety.files.wordpress.com/2016/10/giphy-logo-e1477932075273.png?w=867&h=490&crop=1" alt="Giphy logo"  />
@@ -85,14 +86,14 @@ class App extends Component {
             <h1 className="App-title">Random Trending Giphy</h1>
             </header>
             <div align="center" className={classes.background}>
-            <div id="paperDiv" className="App">
-            <Paper className={classes.root} elevation={5}>
-            <div>
-            <img height="250" width="250" alt="gif" src={this.state.images}/> 
-            </div>
-            <br/>
-            <div>
-           <Button variant="contained" color="primary" onClick={this.getTrending}>Change Giphy</Button>
+              <div id="paperDiv" className="App">
+              <Paper className={classes.root} elevation={5}>
+              <div>
+              <img height="auto" max-width="250" alt="gif" src={this.state.images}/> 
+              </div>
+              <br/>
+              <div>
+            <Button variant="contained" color="primary" onClick={this.getTrending}>Change Giphy</Button>
             </div>
             <br/>
             </Paper>
@@ -101,6 +102,7 @@ class App extends Component {
             <h1>Or</h1>
             <GiphySearch/>
           </div>
+          {/* must be display to credit giphy */}
           <Footer/>
       </div>
       </MuiThemeProvider>

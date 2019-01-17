@@ -25,7 +25,7 @@ https://material-ui.com/getting-started/installation/
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ## Steps to Get the Development Environment Running
-1. Register for an account here: https://developers.giphy.com/docs/#api-keys. Clicke Create an app to get your API Key. 
+1. Register for an account here: https://developers.giphy.com/docs/#api-keys. Click Create an app to get your API Key. 
 2. Download this project.
 3. open in editor (ex. VS code)
 4. open a terminal window (control ~)
@@ -60,7 +60,7 @@ Note: Your project also needs to have a git repository.
 3. Make sure your package.json contains a build script:
     a. "build": "react-scripts build"
 4. `npm run build`
-5. `git Commit`
+5. `git commit`
 6. `git add .` 
 7. `git commit -m "YOUR COMMIT MESSAGE"`
 8. `git Push`
