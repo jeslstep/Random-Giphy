@@ -6,19 +6,16 @@ and search for a gifs such as 'cats'.
 a maximum of 42 search requests an hour, 1000 search requests a day 
 
 # Website
+
 https://random-giphy.herokuapp.com/
 
 # Built with:
-1. React
-2. Giphy API
-https://developers.giphy.com/docs/ 
-3. Express
-https://expressjs.com/en/starter/installing.html
-4. Node.js
-https://nodejs.org/en/
-https://www.npmjs.com/
-5. Material UI
-https://material-ui.com/getting-started/installation/
+* React.js
+* Giphy API
+* Express
+* Node.js
+* Material UI
+
 
 # Setup
 
@@ -40,14 +37,14 @@ Running the server code requires `nodemon`.
 
 # Steps to Deploy on Heroku
 
-## Heroku Prerequisite (one time)
+## Heroku (one time)
 Sign up for an account at https://signup.heroku.com/
 You may have to give them a credit card, but you shouldn't need to pay for anything
 Install Heroku CLI by typing `brew install heroku` in Terminal
 Authenticate by typing heroku login in Terminal
 Note: Your project also needs to have a git repository.
 
-## Heroku Setup
+## Heroku Setup (every time)
 1. In terminal, navigate to the project folder and type `heroku create`
 2. Login in if prompted
 3. Type `git remote -v` to ensure it added successfully
@@ -65,15 +62,6 @@ Note: Your project also needs to have a git repository.
 7. `git commit -m "YOUR COMMIT MESSAGE"`
 8. `git Push`
 9. Push to heroku `git push heroku master`
-
-Every time you make a change to the code that you want to see in Heroku: You'll have to make sure you run a build, then commit, then and push to Heroku. Every time.
-
-## Helpful
-### heroku logs - Display error logs
-### heroku config - Show basic app info
-### heroku restart - Sometimes it helps to turn things off an on again
-### heroku open - Opens the website for you project in the browser
-### More detailed instructions found here: https://devcenter.heroku.com/articles/git
 
 # Completed Steps
 1. Feature displayRandomGiphy -- get a random trending giphy from the Giphy Api by pressed the change giphy button
