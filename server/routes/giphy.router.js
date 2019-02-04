@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 
 // create a schema for a koala
 const giphySchema = new Schema({
-    name: { type: String, required: true},
+    giphy_url: { type: String, required: true},
 });
 
 const Giphy = mongoose.model('Giphy', giphySchema);

@@ -7,7 +7,9 @@ import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import GiphySearch from '../GiphySearch/GiphySearch';
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
+import {HashRouter as Router, Route} from 'react-router-dom';
+import GiphyFavorites from '../GiphyFavorites/GiphyFavorites';
 
 const styles = theme => ({
   root: {
@@ -76,6 +78,9 @@ render() {
     const { classes } = this.props;
     return (
         <MuiThemeProvider theme={theme}>
+        <Router>
+        <Route path="/giphyfavorites" component={GiphyFavorites}/>
+        </Router>
            <header className="App-header">
            {/* giphy logo */}
             <div id="logo">
