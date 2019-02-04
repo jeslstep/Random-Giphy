@@ -79,6 +79,7 @@ render() {
            <header className="App-header">
            {/* giphy logo */}
             <div id="logo">
+            {/* eslint-disable-next-line  */}
             <a href="https://giphy.com/" target="_blank">
               <img height="auto" width="90" src="https://pmcvariety.files.wordpress.com/2016/10/giphy-logo-e1477932075273.png?w=867&h=490&crop=1" alt="Giphy logo"  />
              </a>
