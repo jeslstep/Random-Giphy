@@ -53,7 +53,6 @@ componentDidMount() {
     return (
       <div>
            <pre>FAVORITES</pre>
-           <pre>{JSON.stringify(this.state.dbResults)}</pre>
           <div>
             {this.state.dbResults.map ( gif => (
                  <div height="auto" max-width="250" className="App">

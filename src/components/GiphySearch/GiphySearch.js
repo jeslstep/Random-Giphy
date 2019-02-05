@@ -4,8 +4,7 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import ScrollableAnchor from 'react-scrollable-anchor';
-// import {HashRouter as Router, Link} from 'react-router-dom';
-
+import {HashRouter as Router, Link} from 'react-router-dom';
 
 
 class Search extends Component {
@@ -13,7 +12,6 @@ class Search extends Component {
     state = {
         search: '',
         searchResults: [],
-        giphy_url: '',
     }
 
     // sets the user input in state
@@ -48,32 +46,19 @@ class Search extends Component {
       }
 
     // POST request to send search for giphy url to the server
-    gifUrl = (event) => {
-          console.log('giphy url ', this.state.giphy_url)
-          axios({
-              method: 'POST',
-              url: '/favorites',
-              data: {giphy_url: this.state.giphy_url}
-          }).then(response => {
-              alert('Added to Favorites')
-              this.setState({
-                  giphy_url: ''
-              })
-          }).catch(error => {
-              alert('Error', error);
-              console.log('error',error)
-          })
-      }
-
-    // sets giphy url into state 
     addGiphy = (giphy_url) => {
-        if (giphy_url !== '') {
-              this.setState({
-                  giphy_url: giphy_url,
-              })
-              this.gifUrl();
-        }
-         
+        axios({
+            method: 'POST',
+            url: '/favorites',
+            data: {
+                giphy_url: giphy_url
+            }
+        }).then(response => {
+            alert('Added to Favorites')
+        }).catch(error => {
+            alert('Error', error);
+            console.log('error', error)
+        })     
     }
 
   render() {
@@ -95,6 +80,11 @@ class Search extends Component {
             <br/>
             <br/>
             <a href='#section1'> Scroll Down For Results </a>
+                 <Router>
+                        <nav>
+                            <p><Link to="/giphyfavorites">Favorites</Link></p>
+                        </nav>
+                    </Router>
         </form>
          <ScrollableAnchor id={'section1'}>
           <div>
