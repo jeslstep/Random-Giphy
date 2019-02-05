@@ -8,8 +8,9 @@ import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import GiphySearch from '../GiphySearch/GiphySearch';
 import Footer from '../Footer/Footer';
-import {HashRouter as Router, Route} from 'react-router-dom';
+// import {HashRouter as Router, Route} from 'react-router-dom';
 import GiphyFavorites from '../GiphyFavorites/GiphyFavorites';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 const styles = theme => ({
   root: {
@@ -78,9 +79,6 @@ render() {
     const { classes } = this.props;
     return (
         <MuiThemeProvider theme={theme}>
-        <Router>
-        <Route path="/giphyfavorites" component={GiphyFavorites}/>
-        </Router>
            <header className="App-header">
            {/* giphy logo */}
             <div id="logo">
@@ -105,12 +103,21 @@ render() {
             </Paper>
             </div>
             <div className="App">
+             <a href='#favorites'> Go to Favorites </a>
             <h1>Or</h1>
             <GiphySearch/>
+           
           </div>
+              
           {/* must be display to credit giphy */}
           <Footer/>
       </div>
+       {/* <Router>
+            <Route path="/giphyfavorites" component={GiphyFavorites}/>
+        </Router> */}
+         <ScrollableAnchor id={'favorites'}>
+        <GiphyFavorites />
+         </ScrollableAnchor>
       </MuiThemeProvider>
     );
   }

@@ -46,6 +46,17 @@ a {
    max-width: 450px;
 }
 
+.padding {
+  padding: 5px;
+}
+
+.backgroundColor {
+  background-color: #222;
+}
+
+pre {
+  text-align: center;
+}
 
 
 

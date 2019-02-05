@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const axios = require('axios');
-
+const mongoose = require('mongoose');
+const giphyRouter = require('./routes/giphy.router');
 
 require('dotenv').config();
 
@@ -15,7 +16,23 @@ app.use(express.static('build'));
 
 /** ---------- ROUTE for MongoDB ---------- **/
 
-// const giphyRouter = require('./routes/giphy.router');
+
+app.use('/favorites', giphyRouter);
+
+/** ---------- MONGOOSE CONNECTION ---------- **/
+// mongo connection to database
+const databaseUrl = 'mongodb://localhost:27017/favoritesStore';
+mongoose.connect(databaseUrl, {
+    useNewUrlParser: true
+});
+
+mongoose.connection.once('connected', () => {
+    console.log('mongoose connected to: ', databaseUrl);
+});
+
+mongoose.connection.on('error', (error) => {
+    console.log('mongoose connection error: ', error);
+});
 
 /** ---------- ROUTES for Giphy API---------- **/
 app.get('/trending', (req, res) => {

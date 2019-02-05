@@ -4,12 +4,8 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import { Link } from 'react-router-dom';
+// import {HashRouter as Router, Link} from 'react-router-dom';
 
-// link to home
-const MyLink = props => < Link to = "/giphyfavorites" { ...props
-}
-/>
 
 
 class Search extends Component {
@@ -17,7 +13,7 @@ class Search extends Component {
     state = {
         search: '',
         searchResults: [],
-        giphy_url: ''
+        giphy_url: '',
     }
 
     // sets the user input in state
@@ -53,19 +49,15 @@ class Search extends Component {
 
     // POST request to send search for giphy url to the server
     gifUrl = (event) => {
-          event.preventDefault();
-          console.log('search', this.state.search)
+          console.log('giphy url ', this.state.giphy_url)
           axios({
               method: 'POST',
-              url: '/search',
-              data: {search: this.state.search}
+              url: '/favorites',
+              data: {giphy_url: this.state.giphy_url}
           }).then(response => {
-              console.log('search results', response.data);
+              alert('Added to Favorites')
               this.setState({
-                  searchResults: response.data
-              })
-              this.setState({
-                  search: ''
+                  giphy_url: ''
               })
           }).catch(error => {
               alert('Error', error);
@@ -73,14 +65,15 @@ class Search extends Component {
           })
       }
 
+    // sets giphy url into state 
     addGiphy = (giphy_url) => {
         if (giphy_url !== '') {
               this.setState({
-                  giphy_url: giphy_url
+                  giphy_url: giphy_url,
               })
-            return (<Button component={MyLink} variant= 'raised'>Go to Favorites</Button>)
+              this.gifUrl();
         }
-        //  this.gifUrl();
+         
     }
 
   render() {
@@ -116,10 +109,27 @@ class Search extends Component {
                     alt={gif.description} 
                     title= {gif.description}
                     />
-                        <div align="center">
-                        <Button variant="contained" color="primary" type="submit" onClick = {
-                        () => this.addGiphy(gif.images.fixed_width.url)
-                    }>Favorite</Button>
+                        <div className="backgroundColor" align="center">
+                        <section className="padding">
+                        <Button 
+                            className="a"
+                            variant="contained" 
+                            color="primary" 
+                            type="submit" 
+                            onClick = { () => this.addGiphy(gif.images.fixed_width.url) }>
+                        Favorite
+                        </Button>
+                        </section>
+                        <section className="padding">
+                        {/* <Router>
+                            <Button
+                            variant="contained" 
+                            color="primary" 
+                            >
+                                <Link to="/giphyfavorites">Veiw Favorites</Link>
+                            </Button>
+                        </Router> */}
+                        </section>
                         </div>
                     </Card>
                     </div>
