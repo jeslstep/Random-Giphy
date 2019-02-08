@@ -21,7 +21,7 @@ app.use('/favorites', giphyRouter);
 
 /** ---------- MONGOOSE CONNECTION ---------- **/
 // mongo connection to database
-const databaseUrl = process.env.MONGODB_URI;
+const databaseUrl = process.env.LOCAL_DB || process.env.MONGODB_URI;
 mongoose.connect(databaseUrl, {
     useNewUrlParser: true 
 });
