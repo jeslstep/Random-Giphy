@@ -66,11 +66,14 @@ Note: Your project also needs to have a git repository.
 # Completed Steps
 1. Feature displayRandomGiphy -- get a random trending giphy from the Giphy Api by pressed the change giphy button
 2. Feature giphySearch -- search for a giphy 
+3. Feature mongoDatabase -- add mongo database to store favorite giphy urls
+4. Feature addToFavorites -- add ability to select giphys as favorites
+5. Feature favoritesComponent -- component that displays all favorite gifs 
 
 # Next Steps
-1. Feature mongoDatabase -- add mongo database to store favorite giphy urls
-2. Feature addToFavorites -- add ability to select giphys as favorites
-3. Feature favoritesComponent -- component that displays all favorite gifs 
+1. Feature addLogin -- add passport.js 
+
+
 
 
 
