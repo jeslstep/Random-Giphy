@@ -4,7 +4,7 @@
 }
 
 h1 {
-  color: white;
+  color: black;
 }
 
 #card {
@@ -15,7 +15,7 @@ h1 {
 }
 
 .App-header {
-  background-color: black;
+  background-color: white;
   max-height: 200px;
   padding: 5px;
   color: white;
@@ -38,12 +38,13 @@ div {
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 #paperDiv {
    height: auto;
    max-width: 450px;
+   margin-top: 10px;
 }
 
 .padding {

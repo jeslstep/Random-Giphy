@@ -3,8 +3,8 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import {HashRouter as Router, Link} from 'react-router-dom';
+import { TextField } from '@material-ui/core';
 
 
 class Search extends Component {
@@ -64,11 +64,9 @@ class Search extends Component {
   render() {
     return (
       <div>
-          
-         <pre>{JSON.stringify(this.state.giphy_url)}</pre>
-        {/* <pre>{JSON.stringify(this.state.searchResults)}</pre>  */}
+          <h1 className="App-title">Search and Add Favorites</h1>
         <form onSubmit={this.gifSearch}>
-            <input
+            <TextField
             label="Search"
             onChange={this.handleChangeFor('search')} 
             value={this.state.search} 
@@ -77,16 +75,8 @@ class Search extends Component {
             <br/>
             <br/>
            <Button variant="contained" color="primary" type="submit">Search</Button>
-            <br/>
-            <br/>
-            <a href='#section1'> Scroll Down For Results </a>
-                 <Router>
-                        <nav>
-                            <p><Link to="/giphyfavorites">Favorites</Link></p>
-                        </nav>
-                    </Router>
         </form>
-         <ScrollableAnchor id={'section1'}>
+   
           <div>
             {this.state.searchResults.map ( gif => (
                  <div height="auto" max-width="250" className="App">
@@ -110,22 +100,16 @@ class Search extends Component {
                         Favorite
                         </Button>
                         </section>
-                        <section className="padding">
-                        {/* <Router>
-                            <Button
-                            variant="contained" 
-                            color="primary" 
-                            >
-                                <Link to="/giphyfavorites">Veiw Favorites</Link>
-                            </Button>
-                        </Router> */}
-                        </section>
                         </div>
                     </Card>
                     </div>
             ))}
         </div>
-         </ScrollableAnchor>
+            <Router>
+                <nav>
+                    <h1><Link to="/giphyfavorites">Go to Favorites</Link></h1>
+                </nav>
+            </Router>
       </div>
     );
   }

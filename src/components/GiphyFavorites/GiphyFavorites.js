@@ -5,8 +5,6 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 
 
-
-
 class GiphyFavorites extends Component {
 
 
@@ -55,7 +53,7 @@ componentDidMount() {
            <pre>FAVORITES</pre>
           <div>
             {this.state.dbResults.map ( gif => (
-                 <div height="auto" max-width="250" className="App">
+                 <div key={gif._id} height="auto" max-width="250" className="App">
                     <Card id ="card">
                     <CardMedia
                         component="img"
