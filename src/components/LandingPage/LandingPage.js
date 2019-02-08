@@ -3,7 +3,6 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import GiphySearch from '../GiphySearch/GiphySearch';
 import Footer from '../Footer/Footer';
-import {HashRouter as Router, Link} from 'react-router-dom';
 import { Card } from '@material-ui/core';
 
 
@@ -44,13 +43,6 @@ render() {
    
     return (
         <div>
-            <center>
-            <Router>
-                <nav>
-                    <h1><Link to="/giphyfavorites">Go to Favorites</Link></h1>
-                </nav>
-            </Router>
-            </center>
            <header className="App-header">
            {/* giphy logo */}
             <div id="logo">

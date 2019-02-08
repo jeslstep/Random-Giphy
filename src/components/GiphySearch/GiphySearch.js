@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import { TextField } from '@material-ui/core';
+import {HashRouter as Router, Link} from 'react-router-dom';
 
 
 class Search extends Component {
@@ -63,13 +64,21 @@ class Search extends Component {
   render() {
     return (
       <div>
-          <h1 className="App-title">Search and Add Favorites</h1>
+          <h1 className="App-title">Search and Add Favorites</h1>         
+          <center>
+            <Router>
+                <nav>
+                    <h6><Link to="/giphyfavorites">Veiw Favorites</Link></h6>
+                </nav>
+            </Router>
+            </center>
+          <br/>
         <form onSubmit={this.gifSearch}>
             <TextField
             label="Search"
             onChange={this.handleChangeFor('search')} 
             value={this.state.search} 
-            variant="outlined"
+          
             />
             <br/>
             <br/>
@@ -88,7 +97,7 @@ class Search extends Component {
                     alt={gif.description} 
                     title= {gif.description}
                     />
-                        <div className="backgroundColor" align="center">
+                 <div className="backgroundColor" align="center">
                         <section className="padding">
                         <Button 
                             className="a"
@@ -96,12 +105,16 @@ class Search extends Component {
                             color="primary" 
                             type="submit" 
                             onClick = { () => this.addGiphy(gif.images.fixed_width.url) }>
-                        Favorite
+                        Add to Favorites
                         </Button>
                         </section>
                         </div>
                     </Card>
-                    </div>
+
+     
+                </div>
+
+        
             ))}
         </div>
       </div>
