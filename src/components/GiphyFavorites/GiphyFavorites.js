@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
+import {HashRouter as Router, Link} from 'react-router-dom';
 
 
 class GiphyFavorites extends Component {
@@ -50,6 +51,13 @@ componentDidMount() {
   render() {
     return (
       <div>
+            <center>
+            <Router>
+                <nav>
+                    <h1><Link to="/">Home</Link></h1>
+                </nav>
+            </Router>
+            </center>
            <pre>FAVORITES</pre>
           <div>
             {this.state.dbResults.map ( gif => (

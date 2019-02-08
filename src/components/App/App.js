@@ -25,7 +25,7 @@ render() {
         <MuiThemeProvider theme={theme}>
           <Router>
               <div>
-                  <Route path="/" component={LandingPage}/>
+                  <Route exact path="/" component={LandingPage}/>
                   <Route path="/giphyfavorites" component={GiphyFavorites}/>
               </div>
           </Router>

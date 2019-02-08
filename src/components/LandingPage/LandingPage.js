@@ -1,26 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import GiphySearch from '../GiphySearch/GiphySearch';
 import Footer from '../Footer/Footer';
-import {HashRouter as Router, Route} from 'react-router-dom';
-import GiphyFavorites from '../GiphyFavorites/GiphyFavorites';
+import {HashRouter as Router, Link} from 'react-router-dom';
 import { Card } from '@material-ui/core';
 
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#000000', 
-    },
-    secondary: {
-      main: '#ffffff',
-    },
-  },
-});
-
-// #1a3d50
 
 class LandingPage extends Component {
   // set state
@@ -57,12 +43,14 @@ class LandingPage extends Component {
 render() {
    
     return (
-        <MuiThemeProvider theme={theme}>
-          <Router>
-              <div>
-                  <Route path="/giphyfavorites" component={GiphyFavorites}/>
-              </div>
-          </Router>
+        <div>
+            <center>
+            <Router>
+                <nav>
+                    <h1><Link to="/giphyfavorites">Go to Favorites</Link></h1>
+                </nav>
+            </Router>
+            </center>
            <header className="App-header">
            {/* giphy logo */}
             <div id="logo">
@@ -91,7 +79,7 @@ render() {
           {/* must be display to credit giphy */}
           <Footer/>
       </div>
-      </MuiThemeProvider>
+      </div>
     );
   }
 }

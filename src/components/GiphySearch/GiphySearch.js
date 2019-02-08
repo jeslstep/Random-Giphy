@@ -3,7 +3,6 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import {HashRouter as Router, Link} from 'react-router-dom';
 import { TextField } from '@material-ui/core';
 
 
@@ -105,11 +104,6 @@ class Search extends Component {
                     </div>
             ))}
         </div>
-            <Router>
-                <nav>
-                    <h1><Link to="/giphyfavorites">Go to Favorites</Link></h1>
-                </nav>
-            </Router>
       </div>
     );
   }
