@@ -7,6 +7,8 @@ a maximum of 42 search requests an hour, 1000 search requests a day
 
 # Website
 
+this link can take up to 30 seconds to load since I am using a free dyno on heroku for hosting:
+
 https://random-giphy.herokuapp.com/
 
 # Built with:
